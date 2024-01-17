@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>مركز الشرقي الطبي</title>
+  <style>
+    body {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column; /* تحويل اتجاه العناصر إلى رأسي */
+      height: 100vh;
+      margin: 0;
+      background-color: black; /* إضافة لون الخلفية */
+    }
+
+    #myVideo {
+      width: 100%;
+      max-width: 640px; /* تحديد عرض الفيديو الأقصى */
+      height: auto;
+    }
+
+    button {
+      margin-top: 10px; /* تعديل المسافة بين الزر والفيديو */
+    }
+
+    .title-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* محاذاة عناصر العنوان إلى الوسط */
+      margin-top: 20px; /* رفع العنوان قليلاً */
+    }
+
+    h1 {
+      font-weight: bold;
+      font-size: 2.5rem;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      animation: textAnimation 2s infinite;
+    }
+
+    p {
+      font-size: 1.2rem;
+      color: white;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      text-align: right; /* محاذاة النص إلى اليمين */
+    }
+
+    .contact-container {
+      margin-top: 10px; /* تعديل المسافة بين الفيديو ومعلومات الاتصال */
+    }
+
+    @keyframes textAnimation {
+      0% {
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+      50% {
+        transform: scale(1.2);
+        text-shadow: 4px 4px 8px rgba(0, 0, 0, 0.8);
+      }
+      100% {
+        transform: scale(1);
+        text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <div class="title-container">
+    <h1>مركز الشرقي الطبي</h1>
+  </div>
+
+  <video id="myVideo" width="640" height="360" controls>
+    <source src="v1.html" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+
+  <div class="contact-container">
+    <p style="text-align: right;">المهندس/ امجد الفضلي</p>
+    <p style="text-align: right;">
+      للتواصل:
+      <a href="javascript:void(0)" onclick="window.location.href = 'k.html'" style="color: white; text-decoration: underline;">778044275</a>
+    </p>
+  </div>
+
+  <button onclick="window.location.href = 'hospial.html'">التالي</button>
+
+  <script>
+    document.getElementById('myVideo').addEventListener('ended', function() {
+      window.location.href = 'hospial.html';
+    });
+  </script>
+
+</body>
+</html>
